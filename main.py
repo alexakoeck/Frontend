@@ -3,7 +3,7 @@ from fastapi import FastAPI
 import requests
 
 # change this to the address of the api server
-API_SERVER_ADDRESS = "x.x.x.x"
+API_SERVER_ADDRESS = "34.219.215.29"
 
 app = FastAPI()
 

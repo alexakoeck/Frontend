@@ -14,7 +14,7 @@ def read_root():
 @app.get("/api")
 def read_api(data: str | None = None):
     response = requests.get(f"http://{API_SERVER_ADDRESS}:8080/", params={"data": data})
-    return f"You entered: {response.json()['data']}"
+    return f"summary: {response}"
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8080)

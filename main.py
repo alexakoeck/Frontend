@@ -21,8 +21,7 @@ def read_api(data: str | None = None):
         return {"error": "No input prompt provided."}
 
     response = requests.post(
-        f"http://{API_SERVER_ADDRESS}:8080/api",  # use /api not /
-        json={"prompt": data}  # send JSON not params
+        f"http://{API_SERVER_ADDRESS}:8080/", params={"data": data})  # send JSON not params
     )
 
     if response.status_code == 200:

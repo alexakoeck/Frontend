@@ -7,11 +7,11 @@ API_SERVER_ADDRESS = "35.91.79.183"
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/test")
 def read_root():
     return {"message": "Hello World"}
 
-@app.get("/api")
+@app.get("/")
 def read_api(data: str | None = None):
     response = requests.get(f"http://{API_SERVER_ADDRESS}:8080/", params={"data": data})
     return f"summary: {response}"
